@@ -35,7 +35,7 @@ export const StyledBadge = styled(Badge)(({ theme }) => ({
 export const MainLeftCard = styled(Card)(({ theme }) => ({
   background: theme.palette.secondary.main,
   height: "860px",
-  marginLeft: "30px",
+  // marginLeft: "30px",
   borderRadius: "50px",
 }));
 
@@ -48,19 +48,26 @@ export const MainRightCard = styled(Card)(({ theme }) => ({
   background: theme.palette.secondary.main,
   height: "860px",
   borderRadius: "50px",
-  marginRight: "30px",
+  // marginRight: "70px",
   paddingTop: "10px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  // overflow: "auto",
+  "@media (max-width: 960px)": {
+    height: "100%",
+  },
 }));
 
 export const CustomWorkExpPaper = styled(Paper)(({ theme }) => ({
   background: theme.palette.primary.main,
-  height: "210px",
+  // height: "210px",
   borderRadius: "20px",
   alignItems: "center",
 }));
 
 export const CustomProjectPaper = styled(Paper)(({ theme }) => ({
   background: theme.palette.primary.main,
-  height: "300px",
+  // height: "300px",
   borderRadius: "20px",
 }));

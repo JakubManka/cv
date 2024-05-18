@@ -9,12 +9,13 @@ import {
 } from "../styles/CustomStyles";
 import { Headers } from "../common/Enums";
 
-const RightPanel: FC = () => {
+const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
+  const paperSize = isMediumSize ? 12 : 4;
   return (
     <MainRightCard>
       <Header text={Headers.WORK_EXPERIENCE} />
       <Grid container spacing={3} sx={{ padding: "20px" }}>
-        <Grid item xs={4}>
+        <Grid item xs={paperSize}>
           <CustomWorkExpPaper>
             <Typography variant="body1" pt={1}>
               Software Engineer
@@ -36,7 +37,7 @@ const RightPanel: FC = () => {
             </List>
           </CustomWorkExpPaper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={paperSize}>
           <CustomWorkExpPaper>
             <Typography variant="body1" pt={3}>
               Junior Software Engineer
@@ -55,7 +56,7 @@ const RightPanel: FC = () => {
             </List>
           </CustomWorkExpPaper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={paperSize}>
           <CustomWorkExpPaper>
             <Typography variant="body1" pt={3}>
               Intern
@@ -79,7 +80,7 @@ const RightPanel: FC = () => {
       <Header text={Headers.PROJECTS} />
 
       <Grid container spacing={2} sx={{ padding: "20px" }}>
-        <Grid item xs={4}>
+        <Grid item xs={paperSize}>
           <CustomProjectPaper>
             <Typography variant="body1" pt={2}>
               Fruugo's microservices
@@ -129,7 +130,7 @@ const RightPanel: FC = () => {
             </Typography>
           </CustomProjectPaper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={paperSize}>
           <CustomProjectPaper>
             <Typography variant="body1" pt={2}>
               Create multiple subtask jira plugin
@@ -177,7 +178,7 @@ const RightPanel: FC = () => {
             </Typography>
           </CustomProjectPaper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={paperSize}>
           <CustomProjectPaper>
             <Typography variant="body1" pt={2}>
               Evans Ride to Work
