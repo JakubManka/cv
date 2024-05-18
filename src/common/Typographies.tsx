@@ -54,7 +54,11 @@ export const TypeWriter: FC = () => {
     <Typography variant="body2">
       <Typewriter
         options={{
-          strings: ["Software Engineer", "Full stack Developer"],
+          strings: [
+            "Software Engineer",
+            "Full stack Developer",
+            "Kocham Adusie",
+          ],
           autoStart: true,
           loop: true,
         }}

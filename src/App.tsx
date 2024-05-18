@@ -8,10 +8,8 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
-        <header className="App-header">
-          <CssBaseline />
-          <MainPage />
-        </header>
+        <CssBaseline />
+        <MainPage />
       </ThemeProvider>
     </div>
   );
