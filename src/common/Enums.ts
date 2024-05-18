@@ -1,0 +1,14 @@
+export enum Align {
+  LEFT = "left",
+  RIGHT = "right",
+}
+
+export enum Headers {
+  CONTACT_ME = "CONTACT ME",
+  EDUCATION = "EDUCATION",
+  CERTIFICATION = "CERTIFICATION",
+  LANGUAGES = "LANGUAGES",
+  SKILLS = "SKILLS",
+  WORK_EXPERIENCE = "WORK EXPERIENCE",
+  PROJECTS = "PROJECTS",
+}
