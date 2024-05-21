@@ -38,7 +38,7 @@ export const Header: FC<{
           paddingLeft: "50px",
           paddingRight: "50px",
           borderRadius: "50px",
-          color: "white",
+          color: "#FFFFFF",
           marginTop: "10px",
           marginBottom: "10px",
         }}

@@ -1,7 +1,11 @@
 import React, { FC } from "react";
 import {
   Avatar,
+  Box,
+  Button,
   CardContent,
+  Container,
+  IconButton,
   List,
   ListItem,
   ListItemIcon,
@@ -16,6 +20,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import avatar from "../images/avatar.jpg";
 import { MainLeftCard, StyledBadge } from "../styles/CustomStyles";
 import { darkTheme } from "../Theme";
+import DownloadIcon from "@mui/icons-material/Download";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const LeftPanel: FC = () => {
   const firstSkillsList = [
@@ -36,6 +42,17 @@ const LeftPanel: FC = () => {
     "Jira",
     "Atlassian Connect",
   ];
+
+  const handleDownload = () => {
+    // const
+  };
+
+  const changeToWhiteWhenHoverStyle = {
+    color: darkTheme.palette.text.secondary,
+    ":hover": {
+      color: darkTheme.palette.text.primary,
+    },
+  };
 
   return (
     <MainLeftCard>
@@ -69,14 +86,9 @@ const LeftPanel: FC = () => {
           <TextAlign text="City:" align={Align.LEFT} />
           <TextAlign text="Wrocław" align={Align.RIGHT} />
         </div>
-
-        <div className="row-direction">
-          <TextAlign text="Age:" align={Align.LEFT} />
-          <TextAlign text="25" align={Align.RIGHT} />
-        </div>
       </CardContent>
 
-      <CardContent>
+      <CardContent sx={{ paddingBottom: "0", paddingTop: "0" }}>
         <div className="scrollable">
           <Header text={Headers.CONTACT_ME} />
           <List>
@@ -148,6 +160,66 @@ const LeftPanel: FC = () => {
             </List>
           </div>
         </div>
+      </CardContent>
+      <CardContent
+        sx={{
+          paddingTop: "10px",
+          backgroundColor: darkTheme.palette.primary.main,
+        }}
+      >
+        <Container sx={{ alignItems: "center", display: "flex" }}>
+          <Button
+            sx={changeToWhiteWhenHoverStyle}
+            href="/jakub_manka_cv.pdf"
+            download="jakub_manka_cv.pdf"
+            onClick={handleDownload}
+          >
+            DOWNLOAD CV
+            <DownloadIcon
+              sx={{
+                width: "19px",
+                height: "19px",
+                color: "inherit",
+              }}
+            />
+          </Button>
+          <Box
+            sx={{
+              alignItems: "center",
+              display: "flex",
+              marginLeft: "auto",
+            }}
+          >
+            <IconButton
+              href="https://www.linkedin.com/in/jakubmanka"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="custom-link"
+            >
+              <LinkedInIcon
+                sx={{
+                  width: "19px",
+                  height: "19px",
+                  ...changeToWhiteWhenHoverStyle,
+                }}
+              />
+            </IconButton>
+            <IconButton
+              href="https://github.com/JakubManka/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="custom-link"
+            >
+              <GitHubIcon
+                sx={{
+                  width: "19px",
+                  height: "19px",
+                  ...changeToWhiteWhenHoverStyle,
+                }}
+              />
+            </IconButton>
+          </Box>
+        </Container>
       </CardContent>
     </MainLeftCard>
   );

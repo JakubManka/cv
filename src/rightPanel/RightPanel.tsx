@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { Grid, List, ListItem, Typography } from "@mui/material";
 import { Header } from "../common/Typographies";
 import {
-  CustomProjectPaper,
-  CustomWorkExpPaper,
+  ProjectPaper,
+  WorkExpPaper,
   GreyedOutText,
   MainRightCard,
 } from "../styles/CustomStyles";
@@ -16,7 +16,7 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
       <Header text={Headers.WORK_EXPERIENCE} />
       <Grid container spacing={3} sx={{ padding: "20px" }}>
         <Grid item xs={paperSize}>
-          <CustomWorkExpPaper>
+          <WorkExpPaper>
             <Typography variant="body1" pt={1}>
               Software Engineer
             </Typography>
@@ -35,10 +35,10 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
                 <GreyedOutText>for fruugo.com</GreyedOutText>
               </ListItem>
             </List>
-          </CustomWorkExpPaper>
+          </WorkExpPaper>
         </Grid>
         <Grid item xs={paperSize}>
-          <CustomWorkExpPaper>
+          <WorkExpPaper>
             <Typography variant="body1" pt={3}>
               Junior Software Engineer
             </Typography>
@@ -54,10 +54,10 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
                 <GreyedOutText>for fruugo.com</GreyedOutText>
               </ListItem>
             </List>
-          </CustomWorkExpPaper>
+          </WorkExpPaper>
         </Grid>
         <Grid item xs={paperSize}>
-          <CustomWorkExpPaper>
+          <WorkExpPaper>
             <Typography variant="body1" pt={3}>
               Intern
             </Typography>
@@ -73,7 +73,7 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
                 <GreyedOutText>Jira plugin</GreyedOutText>
               </ListItem>
             </List>
-          </CustomWorkExpPaper>
+          </WorkExpPaper>
         </Grid>
       </Grid>
 
@@ -81,7 +81,7 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
 
       <Grid container spacing={2} sx={{ padding: "20px" }}>
         <Grid item xs={paperSize}>
-          <CustomProjectPaper>
+          <ProjectPaper>
             <Typography variant="body1" pt={2}>
               Fruugo's microservices
             </Typography>
@@ -128,10 +128,10 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
                 </ListItem>
               </List>
             </Typography>
-          </CustomProjectPaper>
+          </ProjectPaper>
         </Grid>
         <Grid item xs={paperSize}>
-          <CustomProjectPaper>
+          <ProjectPaper>
             <Typography variant="body1" pt={2}>
               Create multiple subtask jira plugin
             </Typography>
@@ -176,10 +176,10 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
                 </ListItem>
               </List>
             </Typography>
-          </CustomProjectPaper>
+          </ProjectPaper>
         </Grid>
         <Grid item xs={paperSize}>
-          <CustomProjectPaper>
+          <ProjectPaper>
             <Typography variant="body1" pt={2}>
               Evans Ride to Work
             </Typography>
@@ -224,7 +224,7 @@ const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
                 </ListItem>
               </List>
             </Typography>
-          </CustomProjectPaper>
+          </ProjectPaper>
         </Grid>
       </Grid>
     </MainRightCard>

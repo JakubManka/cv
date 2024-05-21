@@ -6,12 +6,13 @@
 
 .scrollable {
     overflow-y: auto;
-    max-height: 610px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    max-height: 570px;
+    /*-ms-overflow-style: none;*/
+    /*scrollbar-width: none;*/
+    margin: 0;
 }
 .scrollable::-webkit-scrollbar {
-    display: none;
+    /*display: none;*/
 }
 
 .custom-link{

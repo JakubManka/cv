@@ -12,16 +12,16 @@ export const darkTheme = createTheme({
       default: "#121212", // Customize background color
     },
     text: {
-      primary: "white",
+      primary: "#FFFFFF",
       secondary: "#8c8c8e",
     },
   },
   typography: {
     h6: {
-      color: "white",
+      color: "#FFFFFF",
     },
     body1: {
-      color: "white",
+      color: "#FFFFFF",
       // fontSize: "0.9rem",
     },
     body2: {
@@ -41,7 +41,7 @@ export const darkTheme = createTheme({
     MuiListItemIcon: {
       styleOverrides: {
         root: {
-          color: "white",
+          color: "#FFFFFF",
         },
       },
     },
@@ -58,6 +58,13 @@ export const darkTheme = createTheme({
         primary: {
           fontSize: "0.9rem",
           color: "#8c8c8e",
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "#FFFFFF",
         },
       },
     },

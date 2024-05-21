@@ -59,14 +59,14 @@ export const MainRightCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-export const CustomWorkExpPaper = styled(Paper)(({ theme }) => ({
+export const WorkExpPaper = styled(Paper)(({ theme }) => ({
   background: theme.palette.primary.main,
   // height: "210px",
   borderRadius: "20px",
   alignItems: "center",
 }));
 
-export const CustomProjectPaper = styled(Paper)(({ theme }) => ({
+export const ProjectPaper = styled(Paper)(({ theme }) => ({
   background: theme.palette.primary.main,
   // height: "300px",
   borderRadius: "20px",
