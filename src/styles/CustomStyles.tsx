@@ -51,7 +51,7 @@ export const MainRightCard = styled(Card)(({ theme }) => ({
   // marginRight: "70px",
   paddingTop: "10px",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   justifyContent: "center",
   // overflow: "auto",
   "@media (max-width: 960px)": {
@@ -59,15 +59,16 @@ export const MainRightCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-export const WorkExpPaper = styled(Paper)(({ theme }) => ({
-  background: theme.palette.primary.main,
-  // height: "210px",
-  borderRadius: "20px",
-  alignItems: "center",
-}));
 
 export const ProjectPaper = styled(Paper)(({ theme }) => ({
   background: theme.palette.primary.main,
   // height: "300px",
   borderRadius: "20px",
+}));
+
+export const InfoCard = styled(Card)(({theme}) => ({
+  background: theme.palette.primary.main,
+  // height: "210px",
+  borderRadius: "20px",
+  alignItems: "center",
 }));

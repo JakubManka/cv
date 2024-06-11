@@ -4,10 +4,10 @@ import React from "react";
 import LeftPanel from "../leftPanel/LeftPanel";
 import RightPanel from "../rightPanel/RightPanel";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { darkTheme } from "../Theme";
+import { mainTheme } from "../Theme";
 
 const MainPage = () => {
-  const isMediumSize = useMediaQuery(darkTheme.breakpoints.down("md"));
+  const isMediumSize = useMediaQuery(mainTheme.breakpoints.down("md"));
   return (
     <Grid
       container
