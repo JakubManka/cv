@@ -1,4 +1,4 @@
-import { Badge, Card, Paper, styled, Typography } from "@mui/material";
+import { Badge, Card, Paper, styled, SvgIcon, Typography } from "@mui/material";
 
 export const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -34,41 +34,47 @@ export const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export const MainLeftCard = styled(Card)(({ theme }) => ({
   background: theme.palette.secondary.main,
-  height: "860px",
-  // marginLeft: "30px",
+  marginLeft: "-30px",
   borderRadius: "50px",
-}));
+  minHeight: "840px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
 
-export const GreyedOutText = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.secondary,
-  marginLeft: "5px",
+  [theme.breakpoints.down("md")]: {
+    margin: "0",
+    padding: "0",
+  },
 }));
 
 export const MainRightCard = styled(Card)(({ theme }) => ({
   background: theme.palette.secondary.main,
-  height: "860px",
-  borderRadius: "50px",
-  // marginRight: "70px",
   paddingTop: "10px",
+  borderRadius: "50px",
   display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-  // overflow: "auto",
-  "@media (max-width: 960px)": {
-    height: "100%",
+  flexDirection: "column",
+  justifyContent: "start",
+  marginRight: "-30px",
+
+  [theme.breakpoints.down("md")]: {
+    margin: "0",
+    padding: "0",
   },
 }));
 
-
 export const ProjectPaper = styled(Paper)(({ theme }) => ({
   background: theme.palette.primary.main,
-  // height: "300px",
   borderRadius: "20px",
 }));
 
-export const InfoCard = styled(Card)(({theme}) => ({
+export const InfoCard = styled(Card)(({ theme }) => ({
   background: theme.palette.primary.main,
-  // height: "210px",
   borderRadius: "20px",
   alignItems: "center",
+}));
+
+export const ProjectTypography = styled(Typography)(({ theme }) => ({
+  paddingBottom: "5px",
+  textAlign: "left",
+  variant: "body1",
 }));

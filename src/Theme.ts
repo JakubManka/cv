@@ -1,76 +1,79 @@
-import {createTheme} from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 export const mainTheme = createTheme({
-    palette: {
+  palette: {
+    primary: {
+      main: "#282c34", // Customize primary color
+    },
+    secondary: {
+      main: "#1A2027", // Customize secondary color
+    },
+    background: {
+      default: "#121212", // Customize background color
+    },
+    text: {
+      primary: "#FFFFFF",
+      secondary: "#BED754",
+    },
+    grey: {
+      "50": "#46424f",
+    },
+  },
+  typography: {
+    fontFamily: "Josefin Slab, serif",
+    h5: {
+      color: "#BED754",
+    },
+    h6: {
+      color: "#FFFFFF",
+    },
+    body1: {
+      // color: "#FFFFFF",
+      fontSize: "1rem",
+    },
+    body2: {
+      color: "#BED754",
+      // fontSize: "0.9rem",
+    },
+    // Add other custom typography styles here
+  },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          background: "#282c34",
+        },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          color: "#FFFFFF",
+        },
+      },
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          justifyContent: "center",
+        },
+      },
+    },
+    MuiListItemText: {
+      styleOverrides: {
         primary: {
-            main: "#282c34", // Customize primary color
+          fontSize: "0.9rem",
+          // color: "#BED754",
         },
-        secondary: {
-            main: "#1A2027", // Customize secondary color
-        },
-        background: {
-            default: "#121212", // Customize background color
-        },
-        text: {
-            primary: "#FFFFFF",
-            secondary: "#8c8c8e",
-        },
-        grey: {
-            "50": "#46424f"
-        }
+      },
     },
-    typography: {
-        h6: {
-            color: "#FFFFFF",
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "#FFFFFF",
         },
-        body1: {
-            color: "#FFFFFF",
-            // fontSize: "0.9rem",
-        },
-        body2: {
-            color: "#8c8c8e",
-            fontSize: "0.9rem",
-        },
-        // Add other custom typography styles here
+      },
     },
-    components: {
-        MuiPaper: {
-            styleOverrides: {
-                root: {
-                    background: "#282c34",
-                },
-            },
-        },
-        MuiListItemIcon: {
-            styleOverrides: {
-                root: {
-                    color: "#FFFFFF",
-                },
-            },
-        },
-        MuiListItem: {
-            styleOverrides: {
-                root: {
-                    display: "flex",
-                    justifyContent: "center",
-                },
-            },
-        },
-        MuiListItemText: {
-            styleOverrides: {
-                primary: {
-                    fontSize: "0.9rem",
-                    color: "#8c8c8e",
-                },
-            },
-        },
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    color: "#FFFFFF",
-                },
-            },
-        },
-    },
-    // Add other custom theme settings here
+  },
 });

@@ -6,10 +6,6 @@ import {
   CardContent,
   Container,
   IconButton,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Typography,
 } from "@mui/material";
 import "./LeftPanel.css";
@@ -24,33 +20,10 @@ import DownloadIcon from "@mui/icons-material/Download";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const LeftPanel: FC = () => {
-  const firstSkillsList = [
-    "Java",
-    "Kotlin",
-    "JavaScript",
-    "TypeScript",
-    "Spring",
-    "React",
-    "REST",
-  ];
-  const secondSkillsList = [
-    "AWS",
-    "MySQL",
-    "GCP",
-    "Docker",
-    "Git",
-    "Jira",
-    "Atlassian Connect",
-  ];
-
-  const handleDownload = () => {
-    // const
-  };
-
-  const changeToWhiteWhenHoverStyle = {
-    color: mainTheme.palette.text.secondary,
+  const hoverStyle = {
+    color: mainTheme.palette.text.primary,
     ":hover": {
-      color: mainTheme.palette.text.primary,
+      color: mainTheme.palette.text.secondary,
     },
   };
 
@@ -88,91 +61,73 @@ const LeftPanel: FC = () => {
         </div>
       </CardContent>
 
-      <CardContent sx={{ paddingBottom: "0", paddingTop: "0" }}>
-        <div className="scrollable">
-          <Header text={Headers.CONTACT_ME} />
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <LinkedInIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary={
-                  <a
-                    href="https://www.linkedin.com/in/jakubmanka"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="custom-link"
-                  >
-                    https://www.linkedin.com/in/jakubmanka
-                  </a>
-                }
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <EmailIcon />
-              </ListItemIcon>
-              <ListItemText primary="jakmanka@gmail.com" />
-            </ListItem>
-          </List>
-          <Header text={Headers.EDUCATION} />
-          <Typography variant="body2">Cybersecurity</Typography>
-          <Typography variant="body2">
-            Wrocław University of Science and Technology
-          </Typography>
-          <Typography variant="body2">2018-2022</Typography>
+      <CardContent
+        sx={{
+          paddingBottom: "0",
+          paddingTop: "0",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Header text={Headers.CONTACT_ME} />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Box mb={1}>
+            {
+              <a
+                href="https://www.linkedin.com/in/jakubmanka"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="custom-link"
+              >
+                <LinkedInIcon sx={{ marginRight: "10px" }} />
+                <Typography sx={{ marginTop: "2px" }}>linkedin</Typography>
+              </a>
+            }
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <EmailIcon sx={{ marginRight: "10px" }} />
+            <Typography>jakmanka@gmail.com</Typography>
+          </Box>
+        </Box>
 
-          <Header text={Headers.CERTIFICATION} />
-          <Typography variant="body2">
-            AWS Certificated Cloud Practitioner Certificate
-          </Typography>
+        <Header text={Headers.EDUCATION} />
+        <Typography variant="body1">Cybersecurity</Typography>
+        <Typography variant="body1">
+          Wrocław University of Science and Technology
+        </Typography>
+        <Typography variant="body1">2018-2022</Typography>
 
-          <Header text={Headers.LANGUAGES} />
-          <Typography variant="body2">Polish</Typography>
-          <Typography variant="body2">English</Typography>
+        <Header text={Headers.CERTIFICATION} />
+        <Typography variant="body1">
+          AWS Certificated Cloud Practitioner Certificate
+        </Typography>
 
-          <Header text={Headers.SKILLS} />
-          <div className="skills-box">
-            <List
-              sx={{
-                maxWidth: "100px",
-                marginRight: "10px",
-              }}
-            >
-              {firstSkillsList.map((skill, index) => (
-                <ListItem key={index}>
-                  <ListItemText primary={skill} />
-                </ListItem>
-              ))}
-            </List>
-            <List
-              sx={{
-                maxWidth: "100px",
-                marginLeft: "10px",
-              }}
-            >
-              {secondSkillsList.map((skill, index) => (
-                <ListItem key={index}>
-                  <ListItemText primary={skill} />
-                </ListItem>
-              ))}
-            </List>
-          </div>
-        </div>
+        <Header text={Headers.LANGUAGES} />
+        <Typography variant="body1">Polish</Typography>
+        <Typography variant="body1">English</Typography>
       </CardContent>
       <CardContent
         sx={{
-          paddingTop: "10px",
           backgroundColor: mainTheme.palette.primary.main,
         }}
       >
-        <Container sx={{ alignItems: "center", display: "flex" }}>
+        <Container sx={{ display: "flex", padding: "0" }}>
           <Button
-            sx={changeToWhiteWhenHoverStyle}
+            sx={hoverStyle}
             href="/jakub_manka_cv.pdf"
             download="jakub_manka_cv.pdf"
-            onClick={handleDownload}
           >
             DOWNLOAD CV
             <DownloadIcon
@@ -200,7 +155,7 @@ const LeftPanel: FC = () => {
                 sx={{
                   width: "19px",
                   height: "19px",
-                  ...changeToWhiteWhenHoverStyle,
+                  ...hoverStyle,
                 }}
               />
             </IconButton>
@@ -214,7 +169,7 @@ const LeftPanel: FC = () => {
                 sx={{
                   width: "19px",
                   height: "19px",
-                  ...changeToWhiteWhenHoverStyle,
+                  ...hoverStyle,
                 }}
               />
             </IconButton>
