@@ -13,7 +13,8 @@ import { Header, TextAlign, TypeWriter } from "../common/Typographies";
 import { Align, Headers } from "../common/Enums";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import avatar from "../images/avatar.jpg";
+import avatar from "../files/avatar.jpg";
+import jakub_manka_cv from "../files/jakub_manka_cv.pdf";
 import { MainLeftCard, StyledBadge } from "../styles/CustomStyles";
 import { mainTheme } from "../Theme";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -126,9 +127,13 @@ const LeftPanel: FC = () => {
         <Container sx={{ display: "flex", padding: "0" }}>
           <Button
             sx={hoverStyle}
-            href="/jakub_manka_cv.pdf"
+            href={jakub_manka_cv}
+            target="_blank"
             download="jakub_manka_cv.pdf"
+            rel="noreferrer"
           >
+            {/*<a href={jakub_manka_cv} target="_blank" rel="noreferrer">*/}
+            {/*</a>*/}
             DOWNLOAD CV
             <DownloadIcon
               sx={{

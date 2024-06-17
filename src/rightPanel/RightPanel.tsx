@@ -131,9 +131,9 @@ const RightPanel: FC = () => {
                   mt={2}
                   sx={{ display: "flex", justifyContent: "center" }}
                 >
-                  {icons.map((icon) => {
+                  {icons.map((icon, index) => {
                     return (
-                      <Grid item xs={0}>
+                      <Grid item xs={0} key={index}>
                         <SkillIcon icon={icon.element} label={icon.label} />
                       </Grid>
                     );

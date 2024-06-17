@@ -15,8 +15,8 @@ export const BitbucketIcon: React.FC<IconProps> = ({ size }) => {
         fill="#2684FF"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M28.7778 11.7363H20.3582L18.9453 20.2547H13.114L6.22852 28.6944C6.44675 28.8892 6.725 28.9976 7.0135 29.0001H25.2879C25.7324 29.006 26.114 28.675 26.1851 28.2219L28.7778 11.7363Z"
         fill="url(#paint0_linear_87_7932)"
       />
@@ -29,8 +29,8 @@ export const BitbucketIcon: React.FC<IconProps> = ({ size }) => {
           y2="28.0753"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.18" stop-color="#0052CC" />
-          <stop offset="1" stop-color="#2684FF" />
+          <stop offset="0.18" stopColor="#0052CC" />
+          <stop offset="1" stopColor="#2684FF" />
         </linearGradient>
       </defs>
     </svg>

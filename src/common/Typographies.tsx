@@ -2,6 +2,7 @@ import { Box, Paper, Typography } from "@mui/material";
 import React, { FC } from "react";
 import { Align } from "./Enums";
 import Typewriter from "typewriter-effect";
+import { mainTheme } from "../Theme";
 
 interface TextAlignProps {
   text: string;
@@ -52,7 +53,7 @@ export const Header: FC<{
 
 export const TypeWriter: FC = () => {
   return (
-    <Typography variant="body2">
+    <Box sx={{ color: mainTheme.palette.text.secondary }}>
       <Typewriter
         options={{
           strings: ["Software Engineer", "Full stack Developer"],
@@ -60,6 +61,6 @@ export const TypeWriter: FC = () => {
           loop: true,
         }}
       />
-    </Typography>
+    </Box>
   );
 };

@@ -15,14 +15,14 @@ export const JiraIcon: React.FC<IconProps> = ({ size }) => {
         fill="#2684FF"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M15.9999 11.8606C13.1979 9.15007 13.1842 4.75994 15.9694 2.0332L6.60352 11.0881L11.701 16.0184L15.9999 11.8606Z"
         fill="url(#paint0_linear_87_7658)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M20.2912 15.9888L16 20.1392C17.3525 21.4466 18.1124 23.2202 18.1124 25.0695C18.1124 26.9189 17.3525 28.6925 16 29.9999L25.3888 20.9191L20.2912 15.9888Z"
         fill="url(#paint1_linear_87_7658)"
       />
@@ -35,8 +35,8 @@ export const JiraIcon: React.FC<IconProps> = ({ size }) => {
           y2="10.7902"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.18" stop-color="#0052CC" />
-          <stop offset="1" stop-color="#2684FF" />
+          <stop offset="0.18" stopColor="#0052CC" />
+          <stop offset="1" stopColor="#2684FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_87_7658"
@@ -46,8 +46,8 @@ export const JiraIcon: React.FC<IconProps> = ({ size }) => {
           y2="21.1836"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.18" stop-color="#0052CC" />
-          <stop offset="1" stop-color="#2684FF" />
+          <stop offset="0.18" stopColor="#0052CC" />
+          <stop offset="1" stopColor="#2684FF" />
         </linearGradient>
       </defs>
     </svg>
