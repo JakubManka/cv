@@ -1,4 +1,4 @@
-import { Badge, Card, Paper, styled, SvgIcon, Typography } from "@mui/material";
+import { Badge, Box, Card, Paper, styled } from "@mui/material";
 
 export const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -73,7 +73,7 @@ export const InfoCard = styled(Card)(({ theme }) => ({
   alignItems: "center",
 }));
 
-export const ProjectTypography = styled(Typography)(({ theme }) => ({
+export const ProjectTypography = styled(Box)(() => ({
   paddingBottom: "5px",
   textAlign: "left",
   variant: "body1",

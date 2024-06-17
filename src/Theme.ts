@@ -28,14 +28,11 @@ export const mainTheme = createTheme({
       color: "#FFFFFF",
     },
     body1: {
-      // color: "#FFFFFF",
       fontSize: "1rem",
     },
     body2: {
       color: "#BED754",
-      // fontSize: "0.9rem",
     },
-    // Add other custom typography styles here
   },
   components: {
     MuiPaper: {
@@ -64,7 +61,6 @@ export const mainTheme = createTheme({
       styleOverrides: {
         primary: {
           fontSize: "0.9rem",
-          // color: "#BED754",
         },
       },
     },

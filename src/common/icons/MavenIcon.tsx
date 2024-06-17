@@ -173,9 +173,9 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="25.908"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F69923" />
-          <stop offset=".312" stop-color="#F79A23" />
-          <stop offset=".838" stop-color="#E97826" />
+          <stop stopColor="#F69923" />
+          <stop offset=".312" stopColor="#F79A23" />
+          <stop offset=".838" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="b"
@@ -185,10 +185,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="26.637"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="c"
@@ -198,10 +198,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="31.015"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#282662" />
-          <stop offset=".095" stop-color="#662E8D" />
-          <stop offset=".788" stop-color="#9F2064" />
-          <stop offset=".949" stop-color="#CD2032" />
+          <stop stopColor="#282662" />
+          <stop offset=".095" stopColor="#662E8D" />
+          <stop offset=".788" stopColor="#9F2064" />
+          <stop offset=".949" stopColor="#CD2032" />
         </linearGradient>
         <linearGradient
           id="d"
@@ -211,10 +211,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="26.622"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="e"
@@ -224,10 +224,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="30.617"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#282662" />
-          <stop offset=".095" stop-color="#662E8D" />
-          <stop offset=".788" stop-color="#9F2064" />
-          <stop offset=".949" stop-color="#CD2032" />
+          <stop stopColor="#282662" />
+          <stop offset=".095" stopColor="#662E8D" />
+          <stop offset=".788" stopColor="#9F2064" />
+          <stop offset=".949" stopColor="#CD2032" />
         </linearGradient>
         <linearGradient
           id="f"
@@ -237,10 +237,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="27.566"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="g"
@@ -250,10 +250,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="27.264"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="h"
@@ -263,10 +263,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="27.647"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="i"
@@ -276,10 +276,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="27.44"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="j"
@@ -289,9 +289,9 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="24.106"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F69923" />
-          <stop offset=".312" stop-color="#F79A23" />
-          <stop offset=".838" stop-color="#E97826" />
+          <stop stopColor="#F69923" />
+          <stop offset=".312" stopColor="#F79A23" />
+          <stop offset=".838" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="k"
@@ -301,10 +301,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="26.559"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="l"
@@ -314,10 +314,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="30.218"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#282662" />
-          <stop offset=".095" stop-color="#662E8D" />
-          <stop offset=".788" stop-color="#9F2064" />
-          <stop offset=".949" stop-color="#CD2032" />
+          <stop stopColor="#282662" />
+          <stop offset=".095" stopColor="#662E8D" />
+          <stop offset=".788" stopColor="#9F2064" />
+          <stop offset=".949" stopColor="#CD2032" />
         </linearGradient>
         <linearGradient
           id="m"
@@ -327,10 +327,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="25.837"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="n"
@@ -340,10 +340,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="30.266"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#282662" />
-          <stop offset=".095" stop-color="#662E8D" />
-          <stop offset=".788" stop-color="#9F2064" />
-          <stop offset=".949" stop-color="#CD2032" />
+          <stop stopColor="#282662" />
+          <stop offset=".095" stopColor="#662E8D" />
+          <stop offset=".788" stopColor="#9F2064" />
+          <stop offset=".949" stopColor="#CD2032" />
         </linearGradient>
         <linearGradient
           id="o"
@@ -353,10 +353,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="26.306"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="p"
@@ -366,10 +366,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="26.773"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="q"
@@ -379,10 +379,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="26.835"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
         <linearGradient
           id="r"
@@ -392,10 +392,10 @@ export const MavenIcon: React.FC<IconProps> = ({ size }) => {
           y2="26.638"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".323" stop-color="#9E2064" />
-          <stop offset=".63" stop-color="#C92037" />
-          <stop offset=".751" stop-color="#CD2335" />
-          <stop offset="1" stop-color="#E97826" />
+          <stop offset=".323" stopColor="#9E2064" />
+          <stop offset=".63" stopColor="#C92037" />
+          <stop offset=".751" stopColor="#CD2335" />
+          <stop offset="1" stopColor="#E97826" />
         </linearGradient>
       </defs>
     </svg>
