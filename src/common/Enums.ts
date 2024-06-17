@@ -8,7 +8,14 @@ export enum Headers {
   EDUCATION = "EDUCATION",
   CERTIFICATION = "CERTIFICATION",
   LANGUAGES = "LANGUAGES",
-  SKILLS = "SKILLS",
+  SKILLS = "MY SKILLS",
   WORK_EXPERIENCE = "WORK EXPERIENCE",
   PROJECTS = "PROJECTS",
+}
+
+export enum ProjectNames {
+  EVANS_RIDE_TO_WORK = "Evans Ride to Work",
+  MULTIPLE_MICROSERVICES = "Multiple microservices for fruugo.com",
+  CREATE_MULTIPLE_SUBTASKS = "Create multiple subtasks Jira plugin",
+  INTERNSHIP = "Internship project",
 }

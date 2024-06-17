@@ -4,10 +4,15 @@ import React from "react";
 import LeftPanel from "../leftPanel/LeftPanel";
 import RightPanel from "../rightPanel/RightPanel";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { darkTheme } from "../Theme";
+import { mainTheme } from "../Theme";
 
 const MainPage = () => {
-  const isMediumSize = useMediaQuery(darkTheme.breakpoints.down("md"));
+  const isMedium = useMediaQuery(mainTheme.breakpoints.down("md"));
+  const isExtraLarge = useMediaQuery(mainTheme.breakpoints.down("xl"));
+
+  const rightPanelSize = isMedium ? 10 : isExtraLarge ? 8 : 9;
+  const leftPanelSize = isMedium ? 10 : isExtraLarge ? 3 : 2;
+
   return (
     <Grid
       container
@@ -15,11 +20,11 @@ const MainPage = () => {
       mt={2}
       sx={{ display: "flex", justifyContent: "center" }}
     >
-      <Grid item xs={isMediumSize ? 10 : 2}>
+      <Grid item sx={{ paddingBottom: "20px" }} xs={leftPanelSize}>
         <LeftPanel />
       </Grid>
-      <Grid item xs={isMediumSize ? 10 : 9}>
-        <RightPanel isMediumSize={isMediumSize} />
+      <Grid item sx={{ paddingBottom: "20px" }} xs={rightPanelSize}>
+        <RightPanel />
       </Grid>
     </Grid>
   );

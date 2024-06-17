@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-export const darkTheme = createTheme({
+export const mainTheme = createTheme({
   palette: {
     primary: {
       main: "#282c34", // Customize primary color
@@ -12,21 +12,28 @@ export const darkTheme = createTheme({
       default: "#121212", // Customize background color
     },
     text: {
-      primary: "white",
-      secondary: "#8c8c8e",
+      primary: "#FFFFFF",
+      secondary: "#BED754",
+    },
+    grey: {
+      "50": "#46424f",
     },
   },
   typography: {
+    fontFamily: "Josefin Slab, serif",
+    h5: {
+      color: "#BED754",
+    },
     h6: {
-      color: "white",
+      color: "#FFFFFF",
     },
     body1: {
-      color: "white",
-      // fontSize: "0.9rem",
+      // color: "#FFFFFF",
+      fontSize: "1rem",
     },
     body2: {
-      color: "#8c8c8e",
-      fontSize: "0.9rem",
+      color: "#BED754",
+      // fontSize: "0.9rem",
     },
     // Add other custom typography styles here
   },
@@ -41,7 +48,7 @@ export const darkTheme = createTheme({
     MuiListItemIcon: {
       styleOverrides: {
         root: {
-          color: "white",
+          color: "#FFFFFF",
         },
       },
     },
@@ -57,10 +64,16 @@ export const darkTheme = createTheme({
       styleOverrides: {
         primary: {
           fontSize: "0.9rem",
-          color: "#8c8c8e",
+          // color: "#BED754",
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "#FFFFFF",
         },
       },
     },
   },
-  // Add other custom theme settings here
 });

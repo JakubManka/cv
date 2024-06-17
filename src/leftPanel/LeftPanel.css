@@ -4,23 +4,16 @@
     align-items: center;
 }
 
-.scrollable {
-    overflow-y: auto;
-    max-height: 610px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.scrollable::-webkit-scrollbar {
-    display: none;
-}
-
 .custom-link{
-    color: #8c8c8e;
+    color: #ffff;
     text-decoration: none;
+    word-wrap: break-word;
+    display:flex;
+    justify-content: center;
 }
 
 .custom-link:hover{
-    color: #61dafb;
+    color: #BED754;
 }
 
 .skills-box{

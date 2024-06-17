@@ -13,9 +13,8 @@ export const TextAlign: FC<TextAlignProps> = ({ text, align }) => {
     marginLeft: align === Align.LEFT ? "0" : "auto",
     marginRight: align === Align.LEFT ? "auto" : "0",
   };
-  const variant = align === Align.LEFT ? "body1" : "body2";
   return (
-    <Typography variant={variant} sx={alignStyle}>
+    <Typography variant="body1" sx={alignStyle}>
       {text}
     </Typography>
   );
@@ -29,16 +28,18 @@ export const Header: FC<{
       sx={{
         display: "flex",
         justifyContent: "center",
+        // maxWidth: "270px",
+        // margin: "10px",
       }}
     >
       <Paper
         variant="outlined"
         sx={{
           background: "#282c34",
-          paddingLeft: "50px",
-          paddingRight: "50px",
+          paddingLeft: "40px",
+          paddingRight: "40px",
           borderRadius: "50px",
-          color: "white",
+          color: "#FFFFFF",
           marginTop: "10px",
           marginBottom: "10px",
         }}
@@ -54,11 +55,7 @@ export const TypeWriter: FC = () => {
     <Typography variant="body2">
       <Typewriter
         options={{
-          strings: [
-            "Software Engineer",
-            "Full stack Developer",
-            "Kocham Adusie",
-          ],
+          strings: ["Software Engineer", "Full stack Developer"],
           autoStart: true,
           loop: true,
         }}

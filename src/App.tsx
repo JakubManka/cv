@@ -2,12 +2,12 @@ import React from "react";
 import "./App.css";
 import MainPage from "./mainPage/MainPage";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { darkTheme } from "./Theme";
+import { mainTheme } from "./Theme";
 
 function App() {
   return (
     <div className="App">
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={mainTheme}>
         <CssBaseline />
         <MainPage />
       </ThemeProvider>

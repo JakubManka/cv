@@ -1,232 +1,153 @@
 import React, { FC } from "react";
-import { Grid, List, ListItem, Typography } from "@mui/material";
+import { Box, Grid, Paper, styled, Typography } from "@mui/material";
 import { Header } from "../common/Typographies";
 import {
-  CustomProjectPaper,
-  CustomWorkExpPaper,
-  GreyedOutText,
   MainRightCard,
+  ProjectPaper,
+  ProjectTypography,
 } from "../styles/CustomStyles";
 import { Headers } from "../common/Enums";
+import WorkExpTimeline from "../workExpTimeline/WorkExpTimeline";
 
-const RightPanel: FC<{ isMediumSize: boolean }> = ({ isMediumSize }) => {
-  const paperSize = isMediumSize ? 12 : 4;
+import { IconProps } from "../common/Interfaces";
+import { icons } from "../common/icons/Icons";
+import { mainTheme } from "../Theme";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+interface SkillIconProps {
+  icon: FC<IconProps>;
+  label: string;
+}
+
+const StyledSkillIcon = styled(Paper)(({ theme }) => ({
+  background: theme.palette.primary.main,
+  borderRadius: "20px",
+  width: "100px",
+  height: "100px",
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+  alignItems: "center",
+  "&:hover": {
+    background: theme.palette.text.secondary,
+    width: "120px",
+    height: "120px",
+    margin: "-10px",
+  },
+}));
+
+const SkillIcon: FC<SkillIconProps> = ({ icon: Icon, label }) => {
+  return (
+    <StyledSkillIcon theme={mainTheme}>
+      <Icon size="50px" />
+      <Typography mt="10px" variant="body1">
+        {label}
+      </Typography>
+    </StyledSkillIcon>
+  );
+};
+
+const RightPanel: FC = () => {
+  const isLarge = useMediaQuery(mainTheme.breakpoints.down("lg"));
+  const paperSize = isLarge ? 12 : 4;
   return (
     <MainRightCard>
-      <Header text={Headers.WORK_EXPERIENCE} />
-      <Grid container spacing={3} sx={{ padding: "20px" }}>
-        <Grid item xs={paperSize}>
-          <CustomWorkExpPaper>
-            <Typography variant="body1" pt={1}>
-              Software Engineer
-            </Typography>
-            <Typography variant="body1">03.2023 - present</Typography>
-            <Typography variant="body2">Projects I worked on:</Typography>
-            <List>
-              <ListItem>
-                <Typography variant="body1">Evans Ride to Work</Typography>
-              </ListItem>
-              <ListItem sx={{ alignItems: "center" }}>
-                <Typography variant="body1">Create multiple subtask</Typography>
-                <GreyedOutText>Jira plugin</GreyedOutText>
-              </ListItem>
-              <ListItem>
-                <Typography variant="body1">Multiple microservices</Typography>
-                <GreyedOutText>for fruugo.com</GreyedOutText>
-              </ListItem>
-            </List>
-          </CustomWorkExpPaper>
+      <Box mt={0}>
+        <Header text={Headers.PROJECTS} />
+        <Grid container spacing={2} sx={{ padding: "20px" }}>
+          <Grid item xs={paperSize}>
+            <ProjectPaper>
+              <Typography variant="h6" pt={2}>
+                Fruugo's microservices
+              </Typography>
+              <ProjectTypography>
+                <ul>
+                  <li>Managed multiple microservices architecture</li>
+                  <li>Integrated Google Pay for payment processing</li>
+                  <li>
+                    Implemented new endpoints, functionalities, and React
+                    components.
+                  </li>
+                  <li>Created comprehensive Unit and Integration tests</li>
+                  <li>Prepared documentation for reference</li>
+                  <li>Resolved bugs promptly to ensure system stability</li>
+                  <li>Shared knowledge with junior developers</li>
+                </ul>
+              </ProjectTypography>
+            </ProjectPaper>
+          </Grid>
+          <Grid item xs={paperSize}>
+            <ProjectPaper>
+              <Typography variant="h6" pt={2}>
+                "Create multiple subtask" Jira plugin
+              </Typography>
+              <ProjectTypography>
+                <ul>
+                  <li>Resolved client issues promptly.</li>
+                  <li>Conducted live demos for client understanding</li>
+                  <li>Utilized Atlassian Connect for plugin development</li>
+                  <li>Implemented new endpoints and functionalities</li>
+                  <li>
+                    Wrote comprehensive Unit and Integration tests to ensure
+                    code reliability and performance
+                  </li>
+                  <li>Developed documentation</li>
+                  <li>Resolved bugs promptly to ensure system stability</li>
+                </ul>
+              </ProjectTypography>
+            </ProjectPaper>
+          </Grid>
+          <Grid item xs={paperSize}>
+            <ProjectPaper>
+              <Typography variant="h6" pt={2}>
+                Evans Ride to Work
+              </Typography>
+              <ProjectTypography>
+                <ul>
+                  <li>Implemented AWS Lambdas</li>
+                  <li>Integrated with AWS services: S3, DocumentDB, Cognito</li>
+                  <li>Implemented endpoints and functionalities</li>
+                  <li>Created Unit and Integration tests</li>
+                  <li>
+                    Prepared documentation for easy understanding and future
+                    reference
+                  </li>
+                  <li>Resolved bugs promptly to ensure system stability</li>
+                </ul>
+              </ProjectTypography>
+            </ProjectPaper>
+          </Grid>
         </Grid>
-        <Grid item xs={paperSize}>
-          <CustomWorkExpPaper>
-            <Typography variant="body1" pt={3}>
-              Junior Software Engineer
-            </Typography>
-            <Typography variant="body1">10.2021 - 03.2023</Typography>
-            <Typography variant="body2">Projects I worked on: </Typography>
-            <List>
-              <ListItem>
-                <Typography variant="body1">Create multiple subtask</Typography>
-                <GreyedOutText>Jira plugin</GreyedOutText>
-              </ListItem>
-              <ListItem>
-                <Typography variant="body1">Multiple microservices</Typography>
-                <GreyedOutText>for fruugo.com</GreyedOutText>
-              </ListItem>
-            </List>
-          </CustomWorkExpPaper>
-        </Grid>
-        <Grid item xs={paperSize}>
-          <CustomWorkExpPaper>
-            <Typography variant="body1" pt={3}>
-              Intern
-            </Typography>
-            <Typography variant="body1">07.2021 - 09.2021</Typography>
-            <Typography variant="body2"> Projects I worked on: </Typography>
-            <List>
-              <ListItem>
-                <Typography variant="body1">Internship</Typography>
-                <GreyedOutText>project</GreyedOutText>
-              </ListItem>
-              <ListItem>
-                <Typography variant="body1">Create multiple subtask</Typography>
-                <GreyedOutText>Jira plugin</GreyedOutText>
-              </ListItem>
-            </List>
-          </CustomWorkExpPaper>
-        </Grid>
-      </Grid>
-
-      <Header text={Headers.PROJECTS} />
-
-      <Grid container spacing={2} sx={{ padding: "20px" }}>
-        <Grid item xs={paperSize}>
-          <CustomProjectPaper>
-            <Typography variant="body1" pt={2}>
-              Fruugo's microservices
-            </Typography>
-            <Typography variant="body1">12.2021 - present</Typography>
-            <Typography variant="body1">
-              Tech stack and tools I used:
-            </Typography>
-            <List>
-              <ListItem>
-                <Typography variant="body2">
-                  Java, Spring, Maven, Hibernate, MySQL, REST, JUnit
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant="body2" mt={-2}>
-                  JavaScript, TypeScript, React, Webpack, prettier, HTML, SCSS
-                </Typography>
-              </ListItem>
-
-              <ListItem>
-                <Typography variant="body2" mt={-2}>
-                  Docker, Bamboo, Bitbucket, Jira
-                </Typography>
-              </ListItem>
-            </List>
-
-            <Typography variant="body1">
-              During that period, I was involved in:
-              <List>
-                <ListItem>
-                  <Typography variant="body2">
-                    Implementing Google Pay for Braintree
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Implementing FE and BE features
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Fixing bugs, creating documentations
-                  </Typography>
-                </ListItem>
-              </List>
-            </Typography>
-          </CustomProjectPaper>
-        </Grid>
-        <Grid item xs={paperSize}>
-          <CustomProjectPaper>
-            <Typography variant="body1" pt={2}>
-              Create multiple subtask jira plugin
-            </Typography>
-            <Typography variant="body1">07.2021 - present</Typography>
-            <Typography variant="body1">
-              Tech stack and tools I used:
-              <List>
-                <ListItem>
-                  <Typography variant="body2">
-                    Java, Spring, Maven, Hibernate, MySQL, REST, JUnit
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    JavaScript, Atlassian Connect framework, HTML, SCSS
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Jenkins,GitHub, AWS, Jira
-                  </Typography>
-                </ListItem>
-              </List>
-            </Typography>
-            <Typography variant="body1">
-              During that period, I was involved in:
-              <List>
-                <ListItem>
-                  <Typography variant="body2">
-                    Implementing FE and BE features
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Fixing bugs, Creating documentations
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Resolving clients issues and providing assistance as needed
-                  </Typography>
-                </ListItem>
-              </List>
-            </Typography>
-          </CustomProjectPaper>
-        </Grid>
-        <Grid item xs={paperSize}>
-          <CustomProjectPaper>
-            <Typography variant="body1" pt={2}>
-              Evans Ride to Work
-            </Typography>
-            <Typography variant="body1">01.2023 - 04.2023</Typography>
-            <Typography variant="body1">
-              Tech stack and tools I used:
-              <List>
-                <ListItem>
-                  <Typography variant="body2">
-                    Kotlin, Spring, Gradle, Hibernate, MySQL, REST, JUnit
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    TypeScript, React, prettier, node.js
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Docker, GitHub, Jira, AWS lambda
-                  </Typography>
-                </ListItem>
-              </List>
-            </Typography>
-            <Typography variant="body1">
-              During that period, I was involved in:
-              <List>
-                <ListItem>
-                  <Typography variant="body2">
-                    Implementing all AWS lambdas
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Implementing FE and BE features
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2" mt={-2}>
-                    Fixing bugs, creating documentations
-                  </Typography>
-                </ListItem>
-              </List>
-            </Typography>
-          </CustomProjectPaper>
-        </Grid>
-      </Grid>
+      </Box>
+      <Box sx={{ display: "flex", flexDirection: "row" }}>
+        <Box>
+          <Grid container spacing={2} sx={{ padding: "20px" }}>
+            <Grid item xs={isLarge ? 12 : 8}>
+              <Box>
+                <Header text={Headers.SKILLS} />
+                <Grid
+                  container
+                  spacing={2}
+                  mt={2}
+                  sx={{ display: "flex", justifyContent: "center" }}
+                >
+                  {icons.map((icon) => {
+                    return (
+                      <Grid item xs={0}>
+                        <SkillIcon icon={icon.element} label={icon.label} />
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+              </Box>
+            </Grid>
+            <Grid item xs={isLarge ? 12 : 4}>
+              <Header text={Headers.WORK_EXPERIENCE} />
+              <WorkExpTimeline />
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
     </MainRightCard>
   );
 };
