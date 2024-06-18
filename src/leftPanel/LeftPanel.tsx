@@ -14,7 +14,6 @@ import { Align, Headers } from "../common/Enums";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import avatar from "../files/avatar.jpg";
-import jakub_manka_cv from "../files/jakub_manka_cv.pdf";
 import { MainLeftCard, StyledBadge } from "../styles/CustomStyles";
 import { mainTheme } from "../Theme";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -26,6 +25,15 @@ const LeftPanel: FC = () => {
     ":hover": {
       color: mainTheme.palette.text.secondary,
     },
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = `${process.env.PUBLIC_URL}/jakub_manka_cv.pdf`;
+    link.download = "jakub_manka_cv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -125,15 +133,7 @@ const LeftPanel: FC = () => {
         }}
       >
         <Container sx={{ display: "flex", padding: "0" }}>
-          <Button
-            sx={hoverStyle}
-            href={jakub_manka_cv}
-            target="_blank"
-            download="jakub_manka_cv.pdf"
-            rel="noreferrer"
-          >
-            {/*<a href={jakub_manka_cv} target="_blank" rel="noreferrer">*/}
-            {/*</a>*/}
+          <Button sx={hoverStyle} onClick={() => handleDownload()}>
             DOWNLOAD CV
             <DownloadIcon
               sx={{
